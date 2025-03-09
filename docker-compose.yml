@@ -1,0 +1,27 @@
+  version: '3.8'
+services:
+  database:
+    container_name: database
+    image: postgres:latest
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: musicappdb
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: pass
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./database/init.sql:/docker-entrypoint-initdb.d/init.sql
+      - ./database/data:/data/musicappdb
+
+  backend:
+    container_name: backend
+    image: stykle/music-app:010
+    ports:
+      - "8080:8080"
+    depends_on:
+      - database
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://database:5432/musicappdb
+      SPRING_DATASOURCE_USERNAME: admin
+      SPRING_DATASOURCE_PASSWORD: pass
