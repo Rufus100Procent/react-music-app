@@ -25,3 +25,5 @@ services:
       SPRING_DATASOURCE_URL: jdbc:postgresql://database:5432/musicappdb
       SPRING_DATASOURCE_USERNAME: admin
       SPRING_DATASOURCE_PASSWORD: pass
+    volumes:
+      - ./localstorage/mp3:/app/mp3
