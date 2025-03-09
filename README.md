@@ -22,3 +22,8 @@ Currently, two official plugins are available:
 - npm/node
 - git
 - browser   
+
+
+# Site
+
+![image](https://github.com/user-attachments/assets/ec8cb784-2fe1-4e02-9fea-cb9684ac353b)
