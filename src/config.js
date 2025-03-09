@@ -1,6 +1,6 @@
-export const SONG_BASE_URL = "http://localhost:8080/api/v1/songs";
-export const LIKED_BASE_URL = "http://localhost:8080/api/v0/liked";
-export const PLAYLIST_BASE_URL = "http://localhost:8080/api/v0/playlists";
+export const SONG_BASE_URL = "http://localhost:8589/api/v1/songs";
+export const LIKED_BASE_URL = "http://localhost:8589/api/v0/liked";
+export const PLAYLIST_BASE_URL = "http://localhost:8589/api/v0/playlists";
 
 
 export const LIST_ALL_SONGS = `${SONG_BASE_URL}`;
