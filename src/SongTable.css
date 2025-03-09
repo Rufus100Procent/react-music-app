@@ -1,0 +1,162 @@
+.song-table-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  width: 90%;
+  max-width: 100%;
+  border-left: 1px solid #444;
+  border-right: 1px solid #e4dfdf;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+/* Center the search bar above the table */
+.search-bar {
+  text-align: center;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.search-bar input[type="text"] {
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  max-width: 300px;
+  min-width: 160px;
+  outline: none;
+}
+
+.search-button {
+  background: #efccfd;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 8px 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-button .MuiSvgIcon-root {
+  color: #4b4276;
+  font-size: 1.2rem;
+}
+
+.table-container {
+  flex: 1;
+  overflow: auto; 
+  max-height: calc(100vh - var(--audio-height) - 100px);
+}
+
+
+#songTable {
+  width: 100%;
+  border-collapse: collapse;
+  color: #fff;
+  min-width: 600px;
+  table-layout: fixed;
+}
+
+#songTable thead {
+  position: sticky;
+  top: 0;
+  background: linear-gradient(to right, #d175c2, #1095c2);
+  z-index: 2;
+}
+.song-row.playing {
+  background: linear-gradient(to right, #1095c2, #d175c2);
+}
+
+#songTable th,
+#songTable td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #444;
+}
+
+/* Custom styles for play/pause button */
+.play-pause-btn {
+  background-color: #222;
+  border-radius: 50%;
+  padding: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.play-pause-btn:hover {
+  background-color: #444;
+}
+
+
+/* Controls and options columns */
+.controls-cell,
+.options-cell {
+  white-space: nowrap;
+}
+
+/* Popup overlay for messages */
+.popup-overlay {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #838f32;
+  padding: 16px 24px;
+  border-radius: 8px;
+  z-index: 3000;
+}
+
+.popup-message {
+  color: #fff;
+  font-size: 1rem;
+}
+
+/* Confirmation overlay styling */
+.confirm-overlay {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(228, 235, 220, 0.95);
+  padding: 20px;
+  border: 2px solid #444;
+  border-radius: 8px;
+  z-index: 3000;
+  text-align: center;
+}
+
+.confirm-box p {
+  margin-bottom: 16px;
+  font-size: 1.1rem;
+  color: #070707;
+}
+
+.confirm-actions button {
+  margin: 0 8px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.confirm-actions button:first-child {
+  background-color: #f13708;
+  color: #050804;
+}
+
+.confirm-actions button:last-child {
+  background-color: #79db1d;
+  color: #1a1919;
+}
+
+@media (max-width: 600px) {
+  .song-table-container {
+    padding: 10px;
+  }
+  #songTable th,
+  #songTable td {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+}
