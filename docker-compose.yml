@@ -16,7 +16,7 @@ services:
 
   backend:
     container_name: backend
-    image: stykle/music-app:010
+    image: stykle/music-app:012
     ports:
       - "8080:8080"
     depends_on:
